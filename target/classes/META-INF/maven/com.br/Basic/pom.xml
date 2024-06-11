@@ -11,22 +11,28 @@
 	<dependency>
     <groupId>io.appium</groupId>
     <artifactId>java-client</artifactId>
-    <version>7.3.0</version>
+    <version>8.5.1</version>
 </dependency>
 
 	  
     <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.1.0</version> <!-- Ensure this is a recent version -->
-    </dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.1.0</version>
+    <exclusions>
+        <exclusion>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
 
-
-	  
 	  
   </dependencies>
-  
-  
   
   
 </project>

@@ -2,12 +2,7 @@ package com.brtest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import io.appium.java_client.android.AndroidDriver;
 
 public class Launch {
@@ -17,18 +12,29 @@ public class Launch {
 
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
-
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("platformVersion", "14");
-		cap.setCapability("deviceName", "SM-S908E/DS");
-		cap.setCapability("udid", "UCCIOZKVAUKBJZAU");
-		cap.setCapability("appPackage", "com.oneplus.calculator");
-		cap.setCapability("activity", "com.oneplus.calculator.Calculator");
+		cap.setCapability("platformVersion", "9");
+		cap.setCapability("deviceName", "ASUS_X00TD");
+		cap.setCapability("udid", "J9AAGF12U867H7Z");
+		cap.setCapability("appPackage", "com.wt.apkinfo");
+		cap.setCapability("activity", "com.wt.apkinfo.activites.StartActivity");
 		
-		URL url = new URL("http://0.0.0.0:4725/wd/hub");
-		driver = new AndroidDriver(url, cap);
+				
+//			    UiAutomator2Options options =
+//		        new UiAutomator2Options()
+//		            .setAppPackage("com.wt.apkinfo")
+//		            .setAppActivity("com.wt.apkinfo.activites.StartActivity")
+//		            .setNewCommandTimeout(Duration.ofSeconds(600))
+//		            .setAutoGrantPermissions(Boolean.TRUE)
+//		            .setUdid("J9AAGF12U867H7Z");
+//		 
+				
+		    URL url = new URL("https://0.0.0.0:4725/wd/hub");
+		
+		driver = new AndroidDriver(url,cap);
+		
 		
 		
 		//RemoteWebDriver driver1 = new RemoteWebDriver(url, cap);
@@ -74,7 +80,7 @@ public class Launch {
 //
 //        // Your test code here
 //
-   driver.quit();
+  
     }
 
 			
